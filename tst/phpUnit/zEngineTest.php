@@ -51,5 +51,31 @@ final class zEngineTest extends TestCase
             z::safeDivide(4, 0)
         );
     }
+	
+	public function testPasswordHashFunction(): void
+    {
+		$password = 'test password';
+		$hash = z::createHash($password);
+		
+        $this->assertNotTrue(			
+            z::verifyHash($password, 'not a real hash')
+        );
+		
+		$this->assertTrue(
+			z::verifyHash($password, $hash)
+        );
+    }
+	
+	public function testRandomTokenGenerator(): void
+    {
+		$len = 10;
+		$token = z::generateRandomToken($len);
+		
+        $this->assertEquals(			
+			$len,
+            strlen($token)
+        );
+		
+    }
 
 }

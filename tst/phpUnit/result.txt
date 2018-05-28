@@ -1,0 +1,24 @@
+PHPUnit 7.1.5 by Sebastian Bergmann and contributors.
+
+Cart
+ ✔ Model can be created
+ ✔ Module can be created
+
+Order
+ ✔ Model can be created
+
+Product
+ ✔ Model can be created
+ ✔ Product alias
+ ✔ Product view path
+
+zEngine
+ ✔ Parse int
+ ✔ Parse float
+ ✔ Safe divide
+ ✔ Password hash function
+ ✔ Random token generator
+
+Time: 239 ms, Memory: 8.00MB
+
+OK (11 tests, 17 assertions)

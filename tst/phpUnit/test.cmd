@@ -1,5 +1,5 @@
 rem path to PHP executable
-set phpPath=C:\xampp\php\php.exe
+set phpPath=C:\xampp7.1\php\php.exe
 
 rem path to phpUnit phar
 set phpUnitPath=C:\develop\phpUnit\phpunit-7.1.5.phar
