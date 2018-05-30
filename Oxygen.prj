@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project description="" id="1" linkage="" name="New project 1" version="">
+<graphs>
+<graph description="" id="5" linkage="" name="Standard shopping" type="ACTIVITY_DIAGRAM" version="">
+<node description="" height="25.0" id="2" name="START" priority="" style="STYLE_ACTIVITY_START" width="25.0" xpos="260.0" ypos="50.0"/>
+<edge description="" id="4" name="1" priority="" source="2" target="3"/>
+<node description="" height="40.0" id="3" name="Select category" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="230.0" ypos="120.0"/>
+<edge description="" id="8" name="2" priority="" source="3" target="6"/>
+<node description="" height="40.0" id="5" name="Add product to cart" priority="" style="STYLE_ACTIVITY_NODE" width="110.0" xpos="250.0" ypos="410.0"/>
+<edge description="" id="17" name="8" priority="" source="5" target="16"/>
+<node description="" height="40.0" id="6" name="[desired product on the screen?]" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="310.0" ypos="260.0"/>
+<edge description="" id="9" name="3" priority="" source="6" target="7"/>
+<edge description="" id="10" name="4" priority="" source="6" target="5"/>
+<node description="" height="40.0" id="7" name="[is there more pages?]" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="480.0" ypos="190.0"/>
+<edge description="" id="11" name="5" priority="" source="7" target="3"/>
+<edge description="" id="13" name="6" priority="" source="7" target="12"/>
+<node description="" height="40.0" id="12" name="Change page" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="460.0" ypos="380.0"/>
+<edge description="" id="14" name="7" priority="" source="12" target="6"/>
+<node description="" height="40.0" id="16" name="[need more?]" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="70.0" ypos="320.0"/>
+<edge description="" id="18" name="9" priority="" source="16" target="3"/>
+<edge description="" id="21" name="10" priority="" source="16" target="19"/>
+<node description="" height="40.0" id="19" name="Open cart" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="60.0" ypos="460.0"/>
+<edge description="" id="22" name="11" priority="" source="19" target="20"/>
+<node description="" height="40.0" id="20" name="[is signed in?]" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="230.0" ypos="560.0"/>
+<edge description="" id="25" name="13" priority="" source="20" target="27"/>
+<edge description="" id="28" name="14" priority="" source="20" target="26"/>
+<node description="" height="40.0" id="23" name="Sign in" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="80.0" ypos="690.0"/>
+<edge description="" id="24" name="12" priority="" source="23" target="19"/>
+<node description="" height="40.0" id="26" name="Select delivery" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="460.0" ypos="630.0"/>
+<edge description="" id="32" name="17" priority="" source="26" target="31"/>
+<node description="" height="40.0" id="27" name="[has account?]" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="230.0" ypos="650.0"/>
+<edge description="" id="29" name="15" priority="" source="27" target="23"/>
+<edge description="" id="30" name="16" priority="" source="27" target="26"/>
+<node description="" height="40.0" id="31" name="Select payment" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="460.0" ypos="730.0"/>
+<edge description="" id="34" name="18" priority="" source="31" target="33"/>
+<node description="" height="40.0" id="33" name="Confirm" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="460.0" ypos="830.0"/>
+<edge description="" id="36" name="19" priority="" source="33" target="35"/>
+<node description="" height="40.0" id="35" name="[is logged in?]" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="480.0" ypos="920.0"/>
+<edge description="" id="38" name="20" priority="" source="35" target="37"/>
+<edge description="" id="40" name="21" priority="" source="35" target="39"/>
+<node description="" height="40.0" id="37" name="Create account" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="350.0" ypos="990.0"/>
+<edge description="" id="41" name="22" priority="" source="37" target="42"/>
+<node description="" height="40.0" id="39" name="Create Order" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="460.0" ypos="1160.0"/>
+<edge description="" id="45" name="24" priority="" source="39" target="44"/>
+<node description="" height="40.0" id="42" name="Sign in" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="350.0" ypos="1080.0"/>
+<edge description="" id="43" name="23" priority="" source="42" target="39"/>
+<node description="" height="35.0" id="44" name="END R" priority="" style="STYLE_ACTIVITY_END" width="35.0" xpos="490.0" ypos="1280.0"/>
+<test_case changed="true" combinations_data_rows="2" graph_id="5" name="Test situations 1, TDL= 2, ALG= PCT." note="" test_situations_data_rows="2">
+<combinations_data_value col="0" selected_row="0">Select category</combinations_data_value>
+<combinations_data_value col="1" selected_row="0">1 - 2
+</combinations_data_value>
+<combinations_data_value col="0" selected_row="1">[desired product on the screen?]</combinations_data_value>
+<combinations_data_value col="1" selected_row="1">2 - yes
+2 - 4
+</combinations_data_value>
+<test_situation_row>
+<value edge_id="4" name="1"/>
+<value edge_id="8" name="2"/>
+<value edge_id="10" name="4"/>
+</test_situation_row>
+<test_situation_row>
+<value edge_id="4" name="1"/>
+<value edge_id="8" name="2"/>
+<value edge_id="9" name="3"/>
+</test_situation_row>
+</test_case>
+</graph>
+</graphs>
+<crud linkage="" version="">
+<description/>
+<entities>
+<entity entity_id="E0">
+<name>E1</name>
+<description/>
+<attributes/>
+</entity>
+<entity entity_id="E1">
+<name>E2</name>
+<description/>
+<attributes/>
+</entity>
+<entity entity_id="E2">
+<name>E3</name>
+<description/>
+<attributes/>
+</entity>
+</entities>
+<functions>
+<function function_id="F0">
+<name>F1</name>
+<description/>
+</function>
+<function function_id="F1">
+<name>F2</name>
+<description/>
+</function>
+<function function_id="F2">
+<name>F3</name>
+<description/>
+</function>
+</functions>
+<actions>
+<action entity_id_ref="E0" function_id_ref="F0">
+<create imns="false" is_set="false">
+<touched_attributes/>
+</create>
+<read imns="false" is_set="false">
+<touched_attributes/>
+</read>
+<update imns="false" is_set="false">
+<touched_attributes/>
+</update>
+<delete imns="false" is_set="false">
+<touched_attributes/>
+</delete>
+<best_read imns="false" is_set="false"/>
+<influences>
+<influence entity_id_ref="E1" imns="false" is_set="false"/>
+<influence entity_id_ref="E2" imns="false" is_set="false"/>
+</influences>
+</action>
+<action entity_id_ref="E1" function_id_ref="F0">
+<create imns="false" is_set="false">
+<touched_attributes/>
+</create>
+<read imns="false" is_set="false">
+<touched_attributes/>
+</read>
+<update imns="false" is_set="false">
+<touched_attributes/>
+</update>
+<delete imns="false" is_set="false">
+<touched_attributes/>
+</delete>
+<best_read imns="false" is_set="false"/>
+<influences>
+<influence entity_id_ref="E0" imns="false" is_set="false"/>
+<influence entity_id_ref="E2" imns="false" is_set="false"/>
+</influences>
+</action>
+<action entity_id_ref="E2" function_id_ref="F0">
+<create imns="false" is_set="false">
+<touched_attributes/>
+</create>
+<read imns="false" is_set="false">
+<touched_attributes/>
+</read>
+<update imns="false" is_set="false">
+<touched_attributes/>
+</update>
+<delete imns="false" is_set="false">
+<touched_attributes/>
+</delete>
+<best_read imns="false" is_set="false"/>
+<influences>
+<influence entity_id_ref="E0" imns="false" is_set="false"/>
+<influence entity_id_ref="E1" imns="false" is_set="false"/>
+</influences>
+</action>
+<action entity_id_ref="E0" function_id_ref="F1">
+<create imns="false" is_set="false">
+<touched_attributes/>
+</create>
+<read imns="false" is_set="false">
+<touched_attributes/>
+</read>
+<update imns="false" is_set="false">
+<touched_attributes/>
+</update>
+<delete imns="false" is_set="false">
+<touched_attributes/>
+</delete>
+<best_read imns="false" is_set="false"/>
+<influences>
+<influence entity_id_ref="E1" imns="false" is_set="false"/>
+<influence entity_id_ref="E2" imns="false" is_set="false"/>
+</influences>
+</action>
+<action entity_id_ref="E1" function_id_ref="F1">
+<create imns="false" is_set="false">
+<touched_attributes/>
+</create>
+<read imns="false" is_set="false">
+<touched_attributes/>
+</read>
+<update imns="false" is_set="false">
+<touched_attributes/>
+</update>
+<delete imns="false" is_set="false">
+<touched_attributes/>
+</delete>
+<best_read imns="false" is_set="false"/>
+<influences>
+<influence entity_id_ref="E0" imns="false" is_set="false"/>
+<influence entity_id_ref="E2" imns="false" is_set="false"/>
+</influences>
+</action>
+<action entity_id_ref="E2" function_id_ref="F1">
+<create imns="false" is_set="false">
+<touched_attributes/>
+</create>
+<read imns="false" is_set="false">
+<touched_attributes/>
+</read>
+<update imns="false" is_set="false">
+<touched_attributes/>
+</update>
+<delete imns="false" is_set="false">
+<touched_attributes/>
+</delete>
+<best_read imns="false" is_set="false"/>
+<influences>
+<influence entity_id_ref="E0" imns="false" is_set="false"/>
+<influence entity_id_ref="E1" imns="false" is_set="false"/>
+</influences>
+</action>
+<action entity_id_ref="E0" function_id_ref="F2">
+<create imns="false" is_set="false">
+<touched_attributes/>
+</create>
+<read imns="false" is_set="false">
+<touched_attributes/>
+</read>
+<update imns="false" is_set="false">
+<touched_attributes/>
+</update>
+<delete imns="false" is_set="false">
+<touched_attributes/>
+</delete>
+<best_read imns="false" is_set="false"/>
+<influences>
+<influence entity_id_ref="E1" imns="false" is_set="false"/>
+<influence entity_id_ref="E2" imns="false" is_set="false"/>
+</influences>
+</action>
+<action entity_id_ref="E1" function_id_ref="F2">
+<create imns="false" is_set="false">
+<touched_attributes/>
+</create>
+<read imns="false" is_set="false">
+<touched_attributes/>
+</read>
+<update imns="false" is_set="false">
+<touched_attributes/>
+</update>
+<delete imns="false" is_set="false">
+<touched_attributes/>
+</delete>
+<best_read imns="false" is_set="false"/>
+<influences>
+<influence entity_id_ref="E0" imns="false" is_set="false"/>
+<influence entity_id_ref="E2" imns="false" is_set="false"/>
+</influences>
+</action>
+<action entity_id_ref="E2" function_id_ref="F2">
+<create imns="false" is_set="false">
+<touched_attributes/>
+</create>
+<read imns="false" is_set="false">
+<touched_attributes/>
+</read>
+<update imns="false" is_set="false">
+<touched_attributes/>
+</update>
+<delete imns="false" is_set="false">
+<touched_attributes/>
+</delete>
+<best_read imns="false" is_set="false"/>
+<influences>
+<influence entity_id_ref="E0" imns="false" is_set="false"/>
+<influence entity_id_ref="E1" imns="false" is_set="false"/>
+</influences>
+</action>
+</actions>
+<test_cases/>
+</crud>
+</project>
