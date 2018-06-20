@@ -18,9 +18,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SeleniumTestBase {
     
-    static RemoteWebDriver driver;
+    protected static RemoteWebDriver driver;
     
-    public String url = "fill this in derived class";
+    public String base_url = "fill this in derived class";
    
     public SeleniumTestBase() {
        
@@ -35,8 +35,12 @@ public class SeleniumTestBase {
         driver.quit();
     }
     
+    public String getPageUrl(String relativeUrl) {
+        return base_url + "/" + relativeUrl;
+    }
+    
     public void goTo(String relativeUrl) {
-        driver.get(url + "/" + relativeUrl);
+        driver.get(getPageUrl(relativeUrl));
     }
     
     protected void waitForElement(RemoteWebDriver driver, final By by) {

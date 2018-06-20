@@ -45,13 +45,13 @@ public class TestCase1 extends EShopTestBase {
     public void test1() {
         //INITIALIZE
         goTo("");
-        assertTrue(isActualShop());
+        assertTrue("Given URL doesn't seem to be actual e-shop front page.", isActualShop());
         
         // LOGIN
-        goTo("login");
-        driver.findElement(By.name("email")).sendKeys(login);
-        driver.findElement(By.name("password")).sendKeys(password);
-        driver.findElementByCssSelector("input.btn-success").click();
+        LoginPageObject login_page = new LoginPageObject(driver, getPageUrl("login"));
+        login_page.open();
+        login_page.login(login, password);
+        assertTrue("Could not log in.", elementExists(By.className("glyphicon-log-out")));
         
     }
 
