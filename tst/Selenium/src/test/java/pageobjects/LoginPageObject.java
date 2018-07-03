@@ -1,23 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import tests.SeleniumTestBase;
 
 /**
- *
- * @author karel
+ * Represents page with login dialog
  */
-public class LoginPageObject extends PageObjectBase {
+public class LoginPageObject extends EShopPageObject {
    
     @FindBy(name="email")
     public WebElement login_input;
@@ -28,8 +19,8 @@ public class LoginPageObject extends PageObjectBase {
     @FindBy(className = "btn-success")
     public WebElement submit_button;
 	  
-    public LoginPageObject(WebDriver selenium_driver, String base_url) {
-        super(selenium_driver,base_url);
+    public LoginPageObject(SeleniumTestBase parent_test) {
+        super(parent_test, "login");
     }
     
     public void setUserName(String strUserName){

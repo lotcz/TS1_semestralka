@@ -1,3 +1,5 @@
+package tests;
+
 import org.junit.FixMethodOrder;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
@@ -18,7 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SeleniumTestBase {
     
-    protected static RemoteWebDriver driver;
+    public static RemoteWebDriver driver;
     
     public String base_url = "fill this in derived class";
    
@@ -43,7 +45,7 @@ public class SeleniumTestBase {
         driver.get(getPageUrl(relativeUrl));
     }
     
-    protected void waitForElement(RemoteWebDriver driver, final By by) {
+    public void waitForElement(final By by) {
         Wait<WebDriver> wait = new WebDriverWait(driver, 10);
         wait.until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {

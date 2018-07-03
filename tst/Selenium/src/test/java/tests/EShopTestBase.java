@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package tests;
 
 /**
- *
- * @author karel
+ * Base class for all e-shop tests.
  */
 public class EShopTestBase extends SeleniumTestBase {
     
@@ -18,4 +13,5 @@ public class EShopTestBase extends SeleniumTestBase {
         //base_url = "http://google.com";
         //base_url = "http://zshop.loc";
     }
+        
 }
