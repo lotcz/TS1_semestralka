@@ -9,9 +9,9 @@ public class EShopTestBase extends SeleniumTestBase {
     public String password = "karel123";
         
     public EShopTestBase() {
-        //base_url = "http://shop.zavadil.eu";
+        base_url = "http://shop.zavadil.eu";
         //base_url = "http://google.com";
-        base_url = "http://zshop.loc";
+        //base_url = "http://zshop.loc";
     }
         
 }
