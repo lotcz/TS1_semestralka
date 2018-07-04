@@ -36,8 +36,13 @@ public class DeliveryPageObject extends EShopPageObject {
         customer_address_city.sendKeys(city);
         customer_address_street.sendKeys(street);
         customer_address_zip.sendKeys(zip);
-        customer_email.sendKeys(email);
+        if (email != null) {
+            customer_email.sendKeys(email);
+        }
         submit_button.click();
     }
-        
+     
+    public void submit(String name, String city, String street, String zip) {
+        this.submit(name, city, street, zip, null);
+    }
 }

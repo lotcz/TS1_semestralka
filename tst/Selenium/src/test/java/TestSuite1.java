@@ -10,7 +10,7 @@ import tests.*;
  * Test suite for shopping process tests.
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({TestCase1.class, TestCase2.class})
+@Suite.SuiteClasses({TestCase1.class, TestCase2.class, TestCase3.class, TestCase4.class, TestCase5.class})
 public class TestSuite1 {
 
     @BeforeClass
