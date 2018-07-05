@@ -1,0 +1,17 @@
+PHPUnit 7.1.5 by Sebastian Bergmann and contributors.
+
+Cart
+ ✔ Clear data
+ ✔ Create
+ ✔ Read
+ ✔ Update
+ ✔ Delete manually
+ ✔ Delete by creating order
+
+CartIntegration
+ ✔ Cart lifecycle 1
+ ✔ Cart lifecycle 2
+
+Time: 152 ms, Memory: 8.00MB
+
+OK (8 tests, 51 assertions)
